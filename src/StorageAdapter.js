@@ -8,18 +8,15 @@ export class StorageAdapter extends FilesAdapter {
 
   constructor(
     projectId,
-    keyFilename,
     bucket,
-    { bucketPrefix = '',
+    {
+      configurations = {},
+      bucketPrefix = '',
       directAccess = false } = {}) {
 
       super();
 
-      var gcsOptions = {
-        projectId: projectId,
-        keyFilename: keyFilename
-      };
-
+      var gcsOptions = Object.assign(configurations, {projectId: projectId});
       var gcloud = require('gcloud')(gcsOptions);
 
       this._gcs = gcloud.storage();
