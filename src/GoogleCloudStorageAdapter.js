@@ -2,7 +2,7 @@
 
 import * as path from 'path';
 import * as fs from 'streamifier';
-import {FilesAdapter} from 'parse-server/Adapters/Files/FilesAdapter';
+import {FilesAdapter} from 'parse-server/lib/Adapters/Files/FilesAdapter';
 
 export class GoogleCloudStorageAdapter extends FilesAdapter {
 
