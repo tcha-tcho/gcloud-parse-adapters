@@ -40,10 +40,13 @@ new S3Adapter(projectId, secretKey, bucket, options)
 
 Required:
 
+
 - **projectId**: The project ID from the Google Developer's Console. E.g. 'purple-grape-123'.
 
 
+
 ```options ``` is a Javascript object (map) that can contain:
+
 
 - **keyFilename**: Full path to the a .json, .pem, or .p12 key downloaded from the Google Developers Console. NOTE: .pem and .p12 require you to specify config.email as well.
 
