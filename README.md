@@ -35,7 +35,7 @@ var api = new ParseServer({
 ### StorageAdapter constructor options
 
 ``` 
-new StorageAdapter(projectId, secretKey, bucket, options)
+new StorageAdapter(projectId, bucket, options)
 ```
 
 Required:
