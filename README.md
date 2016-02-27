@@ -24,9 +24,11 @@ var api = new ParseServer({
   ...
   filesAdapter: new StorageAdapter(
     "GCLOUD_PROJECT_ID",
-    "GCLOUD_KEY_FILE",
     "BUCKET_NAME",
-    {directAccess: true}
+    {
+      configurations: {keyFilename: 'GCLOUD_KEY_FILE'}
+      directAccess: true
+    }
   ), 
   ...
 });
