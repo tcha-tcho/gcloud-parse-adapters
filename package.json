@@ -1,0 +1,31 @@
+{
+  "name": "gcloud-parse-adapters",
+  "version": "1.0.0",
+  "description": "Parse adapters for the Google Cloud Platform",
+  "main": "./lib/index.js",
+  "scripts": {
+    "postinstall": "./node_modules/.bin/babel src/ -d lib/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ullisenmedia/gcloud-parse-adapters.git"
+  },
+  "author": "Ullisen Media Group, LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ullisenmedia/gcloud-parse-adapters/issues"
+  },
+  "homepage": "https://github.com/ullisenmedia/gcloud-parse-adapters#readme",
+  "dependencies": {
+    "gcloud": "^0.28.0",
+    "parse-server": "^2.1.3",
+    "streamifier": "^0.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.2",
+    "babel-plugin-transform-class-properties": "^6.5.2",
+    "babel-preset-es2015": "^6.5.0",
+    "jest-cli": "^0.8.2"
+  }
+}
