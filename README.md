@@ -53,7 +53,7 @@ Required:
 
 - **bucketPrefix**: create all the files with the specified prefix added to the filename. Can be used to put all the files for an app in a folder with 'folder/'. Default: ''
 
-- **directAccess**: whether reads are going directly to S3 or proxied through your Parse Server. Default: false
+- **directAccess**: whether reads are going directly to Google Cloud Storage or proxied through your Parse Server. Default: false
 
 
 
