@@ -42,6 +42,7 @@ Required:
 
 
 - **projectId**: The project ID from the Google Developer's Console. E.g. 'purple-grape-123'.
+- **bucket**: the name of your Google Storage bucket.
 
 
 
