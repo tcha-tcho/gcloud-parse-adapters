@@ -42,6 +42,7 @@ Required:
 
 - **projectId**: The project ID from the Google Developer's Console. E.g. 'purple-grape-123'.
 
+
 ```options ``` is a Javascript object (map) that can contain:
 
 - **keyFilename**: Full path to the a .json, .pem, or .p12 key downloaded from the Google Developers Console. NOTE: .pem and .p12 require you to specify config.email as well.
@@ -57,6 +58,7 @@ Required:
 - **autoRetry**: Automatically retry requests if the response is related to rate limits or certain intermittent server errors. We will exponentially backoff subsequent requests by default. (default: true)
 
 - **maxRetries**: Maximum number of automatic retries attempted before returning the error. (default: 3)
+
 
 
 Learn more about Google Cloud Storage for Node.js [here][more].
