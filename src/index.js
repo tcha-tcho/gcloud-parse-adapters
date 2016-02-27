@@ -1,3 +1,8 @@
 'use strict';
 
-export {StorageAdapter} from './StorageAdapter';
+import {GoogleCloudStorageAdapter} from './GoogleCloudStorageAdapter';
+
+
+module.export = {
+  GoogleCloudStorageAdapter: GoogleCloudStorageAdapter
+}

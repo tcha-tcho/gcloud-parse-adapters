@@ -4,7 +4,8 @@
   "description": "Parse adapters for the Google Cloud Platform",
   "main": "./lib/index.js",
   "scripts": {
-    "postinstall": "./node_modules/.bin/babel src/ -d lib/"
+    "build": "./node_modules/.bin/babel src/ -d lib/",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
