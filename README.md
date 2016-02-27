@@ -32,10 +32,10 @@ var api = new ParseServer({
 });
 ```
 
-### S3Adapter constructor options
+### StorageAdapter constructor options
 
 ``` 
-new S3Adapter(projectId, secretKey, bucket, options)
+new StorageAdapter(projectId, secretKey, bucket, options)
 ```
 
 Required:
