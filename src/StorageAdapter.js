@@ -25,7 +25,7 @@ export class StorageAdapter extends FilesAdapter {
       this._bucketPrefix = bucketPrefix;
       this._projectId = projectId;
       this._directAccess = directAccess;
-      this._keyFilename = keyFilename;
+      this._configurations = configurations;
   }
 
   createFile(config, filename, data) {
