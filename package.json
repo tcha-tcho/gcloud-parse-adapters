@@ -1,6 +1,6 @@
 {
   "name": "gcloud-parse-adapters",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "Parse adapters for the Google Cloud Platform",
   "main": "./lib/index.js",
   "scripts": {
