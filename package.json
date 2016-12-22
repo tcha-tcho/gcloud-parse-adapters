@@ -2,14 +2,14 @@
   "name": "gcloud-parse-adapters",
   "version": "0.1.2",
   "description": "Parse adapters for the Google Cloud Platform",
-  "main": "./lib/index.js",
+  "main": "./src/index.js",
   "scripts": {
     "build": "./node_modules/.bin/babel src/ -d lib/",
     "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ullisenmedia/gcloud-parse-adapters.git"
+    "url": "git+https://github.com/tcha-tcho/gcloud-parse-adapters.git"
   },
   "author": "Ullisen Media Group, LLC",
   "license": "MIT",
