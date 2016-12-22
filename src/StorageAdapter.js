@@ -17,9 +17,9 @@ export class StorageAdapter extends FilesAdapter {
       super();
 
       var gcsOptions = Object.assign(configurations, {projectId: projectId});
-      var gcloud = require('gcloud')(gcsOptions);
+      var gcloud = require('google-cloud').storage(gcsOptions)
 
-      this._gcs = gcloud.storage();
+      this._gcs = gcloud;
       this._bucket = this._gcs.bucket(bucket);
       this._bucketName = bucket;
       this._bucketPrefix = bucketPrefix;
@@ -28,9 +28,15 @@ export class StorageAdapter extends FilesAdapter {
       this._configurations = configurations;
   }
 
-  createFile(config, filename, data) {
+  createFile(filename, data, contentType) {
 
-    var params = Object.assign(config || {}, {destination: this._bucketPrefix + filename});
+    let params = {
+      destination: this._bucketPrefix + filename
+      ,metadata: {
+        contentType: contentType || 'application/octet-stream'
+      }    
+    };
+
 
     if (this._directAccess) {
         params.metadata = params.metadata || {};
@@ -42,7 +48,6 @@ export class StorageAdapter extends FilesAdapter {
             role: this._gcs.acl.READER_ROLE
           }];
         }
-
     }
 
     return new Promise((resolve, reject) => {
@@ -60,7 +65,7 @@ export class StorageAdapter extends FilesAdapter {
     });
   }
 
-  deleteFile(config, filename) {
+  deleteFile(filename) {
 
     var file = this._bucket.file(this._bucketPrefix + filename);
 
@@ -74,7 +79,7 @@ export class StorageAdapter extends FilesAdapter {
     });
   }
 
-  getFileData(config, filename) {
+  getFileData(filename) {
 
     var file = this._bucket.file(this._bucketPrefix + filename);
 
