@@ -1,3 +1,3 @@
 'use strict';
 
-export {StorageAdapter} from './StorageAdapter';
+export {StorageAdapter} from './StorageAdapter.js';
