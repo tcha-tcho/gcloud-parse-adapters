@@ -48,6 +48,8 @@ var StorageAdapter = exports.StorageAdapter = function (_FilesAdapter) {
     _this._bucket = _this._gcs.bucket(bucket);
     _this._bucketName = bucket;
     _this._bucketPrefix = bucketPrefix;
+    _this._baseUrlDirect = "https://storage.cloud.google.com/"
+                           +bucket+"/"+bucketPrefix;
     _this._projectId = projectId;
     _this._directAccess = directAccess;
     _this._configurations = configurations;
